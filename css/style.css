@@ -150,6 +150,6 @@ div.cost_display .dollar_sign {
   color:     #084a01;
 }
 
-form.stop input {
+form.stop input, form.waste input {
 	font-size: 2em;
 }

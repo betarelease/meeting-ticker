@@ -107,6 +107,7 @@ function translateDigitToList( total_index, total ) {
 $(document).ready( function() {
   var timer = null;
   $("#display").hide();
+  $(".toilet").hide();
   $("input.watermark").each( function() {
     $(this).watermark( $(this).attr( "title" ) );
   } );
@@ -129,6 +130,14 @@ $(document).ready( function() {
   $('form.stop').submit( function( event ) {
     event.preventDefault();
     clearInterval( timer );
+    return false;
+  });
+
+  $('form.waste').submit( function( event ) {
+    event.preventDefault();
+    clearInterval( timer );
+    $("#message").text("This meeting has WASTED");
+    $(".toilet").fadeIn(1500);
     return false;
   });
   
