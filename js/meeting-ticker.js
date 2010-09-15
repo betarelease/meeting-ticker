@@ -130,13 +130,14 @@ $(document).ready( function() {
   $('form.stop').submit( function( event ) {
     event.preventDefault();
     clearInterval( timer );
+    $(".toilet").fadeIn(1500);
     return false;
   });
 
   $('form.waste').submit( function( event ) {
     event.preventDefault();
     clearInterval( timer );
-    $("#message").text("This meeting has WASTED");
+    $("#message").text("This meeting has Wasted");
     $(".toilet").fadeIn(1500);
     return false;
   });
